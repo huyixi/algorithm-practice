@@ -1,9 +1,9 @@
-function findLongestStreak(arr, threshold) {
+export function findLongestStreak(arr, threshold) {
   let currentStreak = 0;
   let maxStreak = 0;
 
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === true) {
+    if (arr[i]) {
       currentStreak++;
     } else {
       maxStreak = Math.max(currentStreak, maxStreak);
@@ -15,5 +15,3 @@ function findLongestStreak(arr, threshold) {
 
   return maxStreak >= threshold ? maxStreak : 0;
 }
-
-module.exports = findLongestStreak;

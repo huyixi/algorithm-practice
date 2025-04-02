@@ -1,7 +1,7 @@
-const findLongestStreak = require(".");
+import { describe, expect, test } from "vitest";
+import { findLongestStreak } from "./index.js";
 
 describe("findLongestStreak Test", () => {
-
   test("test 1: Array [true, true, false, true, true, true]，阈值 3 应返回 1", () => {
     const arr = [true, true, false, true, true, true];
     const threshold = 3;
